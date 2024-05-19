@@ -33,7 +33,9 @@ export function TaskForm({ task }: { task: Task }) {
         <CardHeader>
           <CardTitle>{task?.id ? "Edit" : "Create"} Task</CardTitle>
           <CardDescription>
-            Fill out the form below to create a new task.
+            {task?.id
+              ? "Fill the inputs to edit the task."
+              : "Fill out the form below to create a new task."}
           </CardDescription>
         </CardHeader>
         <CardContent>
